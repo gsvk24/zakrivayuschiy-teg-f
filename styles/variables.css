@@ -1,0 +1,25 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --accent-color: #00cc14;
+  --theme-bg: #000000;
+  --accent-button: #00cc14;
+  --button-text: #00cc14;
+  --fill-active: #ff0000;
+  --fill-border: #00cc14;
+  --fill-heart: #ff0000;
+  --line-color: #000;
+  --shadow: #000;
+  --gradient: #007f0c;
+  --gradient-second: #004306;
+  --main-font: "Inter-Variable";
+  --second-font: "PressStart2P";
+  --s-font-weight: "wght" 465;
+  --l-font-weight: "wght" 785;
+  --s-f: 14px;
+  --m-f: 18px;
+  --s-l: 14px;
+  --ssm-l: 21px;
+  --sm-l: 22px;
+  --m-l: 23px;
+}
