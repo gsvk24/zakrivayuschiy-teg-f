@@ -9,9 +9,13 @@
 }
 
 body {
+<<<<<<< HEAD
   margin: 0 auto;
   min-inline-size: 375px;
   max-inline-size: 1440px;
+=======
+  margin: 0;
+>>>>>>> 8210beaa53c0afda5a8f08ec1faa63134d2819df
 }
 
 h1,
@@ -23,8 +27,12 @@ h6,
 p,
 ul,
 ol,
+<<<<<<< HEAD
 li,
 figure {
+=======
+li {
+>>>>>>> 8210beaa53c0afda5a8f08ec1faa63134d2819df
   margin: 0;
   padding: 0;
 }
@@ -38,8 +46,11 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+<<<<<<< HEAD
   background-color: transparent;
   border: none;
+=======
+>>>>>>> 8210beaa53c0afda5a8f08ec1faa63134d2819df
 }
 
 ul,
@@ -47,10 +58,13 @@ ol {
   list-style: none;
 }
 
+<<<<<<< HEAD
 img {
   width: 100%;
 }
 
+=======
+>>>>>>> 8210beaa53c0afda5a8f08ec1faa63134d2819df
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
