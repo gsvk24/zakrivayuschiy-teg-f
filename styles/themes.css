@@ -9,9 +9,9 @@
   --accent-color: #00cc14;
   --theme-bg: #000000;
   --shadow: #000;
-  --button-text: #00CC14;
+  --button-text: #00cc14;
 
-  --fill-active: #FF0000;
+  --fill-active: #ff0000;
   --fill-border: #00cc14;
   --fill-heart: #ff0000;
   --accent-button: #00cc14;
@@ -20,8 +20,8 @@
   --gradient-second: #004306;
   --line-color: #000;
 
-  --s-font-wght: 'wght' 465;
-  --l-font-wght: 'wght' 785;
+  --s-font-wght: "wght", 465;
+  --l-font-wght: "wght" 785;
 }
 
 :root.theme-light {
@@ -30,17 +30,16 @@
   --shadow: #fff;
   --button-text: #fcfcfc;
 
-  --fill-active: #FF0000;
+  --fill-active: #ff0000;
   --fill-border: #000;
   --accent-button: #f0f8ff;
-
 
   --gradient: #e7e7e7;
   --gradient-second: #1a1a1a;
   --line-color: #d3d3d3;
 
-  --s-font-wght: 'wght' 400;
-  --l-font-wght: 'wght' 700;
+  --s-font-weight: "wght", 400;
+  --l-font-weight: "wght" 700;
 }
 
 @media (prefers-color-scheme: light) {
@@ -50,8 +49,7 @@
     --shadow: #fff;
     --button-text: #fcfcfc;
 
-
-    --fill-active: #FF0000;
+    --fill-active: #ff0000;
     --fill-border: #000;
     --accent-button: #f0f8ff;
 
@@ -59,7 +57,7 @@
     --gradient-second: #1a1a1a;
     --line-color: #d3d3d3;
 
-    --s-font-wght: 'wght' 400;
-    --l-font-wght: 'wght' 700;
+    --s-font-weight: "wght" 400;
+    --l-font-weight: "wght" 700;
   }
 }
