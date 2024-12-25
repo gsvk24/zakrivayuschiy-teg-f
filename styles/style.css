@@ -19,7 +19,7 @@
   position: relative;
   flex-direction: column;
   align-items: center;
-  font-variation-settings: var(--s-font-weight, 465);
+  font-variation-settings: "wght" var(--s-font-weight);
   font-weight: var(--s-font-weight);
   font-family: var(--main-font), sans-serif;
   background-image: repeating-linear-gradient(
@@ -184,7 +184,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 48px;
   inline-size: clamp(23.4375rem, 16.3666rem + 30.1692vw, 43.5rem);
 }
 
@@ -200,7 +200,7 @@
   padding-inline: 11px;
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
-  font-variation-settings: var(--l-font-weight, 785);
+  font-variation-settings: "wght" var(--l-font-weight);
   line-height: var(--sm-l, 22px);
   color: var(--accent-color);
   border-block-end: 2px solid var(--accent-color, #00cc14);
@@ -251,7 +251,7 @@
   text-shadow: -1px 0px var(--theme-bg), 0px 1px var(--theme-bg),
     1px 0px var(--theme-bg), 0px -1px var(--theme-bg);
   opacity: 0.5;
-  mix-blend-mode: lighten;
+  mix-blend-mode: hard-light;
 }
 
 .card__text {
@@ -263,7 +263,6 @@
   font-size: var(--m-f);
   line-height: var(--ssm-l, 21px);
   border-block-start: 2px solid var(--accent-color);
-  font-variation-settings: var(--s-font-weight, 465);
 }
 
 .card__like {
@@ -271,7 +270,6 @@
   flex-wrap: nowrap;
   justify-content: end;
   inline-size: 100%;
-  align-items: center;
   padding-block: 12.5px 12px;
   padding-inline-end: 25px;
   gap: 7px;
@@ -281,17 +279,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--accent-color, #00cc14);
+  border: 2px solid transparent;
   background: none;
   padding: 0;
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--accent-color, #00cc14);
+  outline: none;
 }
 
 .like-icon {
   padding-inline-end: 4px;
+  margin: auto;
 }
 
 .like-icon .contour {
@@ -312,7 +311,9 @@
 .like-icon .sparks {
   opacity: 0;
 }
-
+.like-icon.is-liked {
+  animation: heart-scaling 0.3s;
+}
 .like-icon.is-liked .core {
   fill: var(--fill-heart);
   transition: 0.3s fill linear;
@@ -454,7 +455,7 @@
   }
 
   .theme-menu__button:hover {
-    opacity: 60%;
+    animation: smoothing 1s infinite forwards;
   }
 
   .heart:hover {
@@ -490,15 +491,5 @@
 @supports (font-variation-settings: normal) {
   .card__text {
     font-family: var(--main-font), sans-serif;
-    font-variation-settings: var(--s-font-weight, 465);
-  }
-}
-
-@supports ((text-stroke: 1px #000) or (-webkit-text-stroke: 1px #000)) {
-  .label {
-    -webkit-text-stroke-color: var(--shadow);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke: 1px var(--shadow);
-    text-shadow: none;
   }
 }
