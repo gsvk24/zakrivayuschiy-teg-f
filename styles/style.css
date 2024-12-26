@@ -68,6 +68,7 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px var(--accent-color);
+  transition: box-shadow 0.3s ease;
 }
 
 .button__text {
@@ -184,7 +185,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 47px;
   inline-size: clamp(23.4375rem, 16.3666rem + 30.1692vw, 43.5rem);
 }
 
@@ -285,7 +286,9 @@
 }
 
 .card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
   outline: none;
+  transition: border-color 0.3s ease;
 }
 
 .like-icon {
@@ -387,7 +390,8 @@
   align-items: center;
   gap: 30px 20px;
   max-width: min(91%, 353px);
-  padding: 30px;
+  padding-block: 30px;
+  padding-inline: 27px;
   color: var(--accent-color);
   font-family: var(--second-font), monospace;
   font-size: 14px;
@@ -447,6 +451,10 @@
   .saving-button_floppy {
     width: 28px;
   }
+
+  .dialog[open] {
+    padding-inline: 39px;
+  }
 }
 
 @media (hover: hover) {
@@ -491,5 +499,14 @@
 @supports (font-variation-settings: normal) {
   .card__text {
     font-family: var(--main-font), sans-serif;
+  }
+}
+
+@supports ((text-stroke: 1px #000) or (-webkit-text-stroke: 1px #000;)) {
+  .picture-caption {
+    -webkit-text-stroke-color: var(--shadow);
+    -webkit-text-stroke-width: 1px;
+    text-shadow: none;
+    text-stroke: 1px var(--shadow);
   }
 }
